@@ -11,3 +11,35 @@ html {
     box-sizing: border-box;
     text-decoration: none;
 }
+
+.abbr-tooltip {
+    position: relative;
+    cursor: help;
+    border-bottom: 1px dotted #d6d6d6;
+}
+ 
+.abbr-tooltip.dia_abbr {
+    border-bottom: 1px dotted rgb(36, 36, 36);
+}
+
+.abbr-tooltip span {
+    visibility: hidden;
+    width: max-content;
+    background-color: #333333;
+    color: #fff;
+    text-align: left;
+    padding: 5px;
+    border-radius: 4px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; 
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.abbr-tooltip:hover span {
+    visibility: visible;
+    opacity: 1;
+}
